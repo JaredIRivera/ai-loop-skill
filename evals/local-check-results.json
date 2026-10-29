@@ -1,0 +1,126 @@
+{
+  "record_type": "local structural and synthetic control-flow checks",
+  "run_utc": "2026-10-29T03:08:25.025834+00:00",
+  "python": "3.11.15",
+  "model_calls": 0,
+  "source_sha256": "442489db3ba6512854cc1ed27aa2e2fcb4cc50d5fb58a99d8252243a3bf8c669",
+  "checked_files_sha256": {
+    "SKILL.md": "fdab71ab011974ba6c2b9727b2e77225a86e7d28513cb6fb61edb738636e7f0e",
+    "scripts/check_package.py": "e74389e279a74882613dec884de0ce9bdd80732d13ad8c1373ac3d2758f23457",
+    "evals/check_loop_model.py": "9e3edee1e8e3ab5b7a7617d805c92976c807bda84aa6b5ce3edb2699acd86835"
+  },
+  "suites": [
+    {
+      "command": "python scripts/check_package.py",
+      "exit_code": 0,
+      "report": {
+        "suite": "package-preflight",
+        "scope": "Package structure and examples; no model evaluation",
+        "model_calls": 0,
+        "passed": 9,
+        "total": 9,
+        "checks": [
+          {
+            "name": "required_files",
+            "passed": true,
+            "detail": "All required files present"
+          },
+          {
+            "name": "skill_metadata",
+            "passed": true,
+            "detail": "Required installed skill identifiers and license metadata"
+          },
+          {
+            "name": "readme_section_order",
+            "passed": true,
+            "detail": "Compared all H2 headings against presentation reference"
+          },
+          {
+            "name": "assistant_setup_heading",
+            "passed": true,
+            "detail": "Installation subsection present"
+          },
+          {
+            "name": "interface_invocation",
+            "passed": true,
+            "detail": "Interface default prompt retains skill invocation"
+          },
+          {
+            "name": "relative_links",
+            "passed": true,
+            "detail": "Checked 32 local links; failures: []"
+          },
+          {
+            "name": "portable_skill_navigation",
+            "passed": true,
+            "detail": "No private wiki navigation remains in the skill"
+          },
+          {
+            "name": "evaluator_json_example",
+            "passed": true,
+            "detail": "Example parses and retains required fields and score range"
+          },
+          {
+            "name": "pseudocode_syntax",
+            "passed": true,
+            "detail": "Illustrative function parses; application adapters are supplied only by tests"
+          }
+        ]
+      }
+    },
+    {
+      "command": "python evals/check_loop_model.py",
+      "exit_code": 0,
+      "report": {
+        "suite": "synthetic-loop-control-flow",
+        "scope": "Documented example with synthetic adapters; no model judgments",
+        "model_calls": 0,
+        "passed": 9,
+        "total": 9,
+        "checks": [
+          {
+            "name": "success_stops_after_first_cycle",
+            "passed": true
+          },
+          {
+            "name": "revision_receives_feedback_and_stops_on_success",
+            "passed": true
+          },
+          {
+            "name": "iteration_cap_preserves_best_attempt",
+            "passed": true
+          },
+          {
+            "name": "no_progress_stops_early",
+            "passed": true
+          },
+          {
+            "name": "human_escalation_is_terminal",
+            "passed": true
+          },
+          {
+            "name": "risk_overrides_passing_quality_score",
+            "passed": true
+          },
+          {
+            "name": "zero_iteration_limit_rejected",
+            "passed": true
+          },
+          {
+            "name": "negative_iteration_limit_rejected",
+            "passed": true
+          },
+          {
+            "name": "boolean_iteration_limit_rejected",
+            "passed": true
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "No model evaluation",
+    "No assistant discovery test",
+    "No production integration or cost measurement"
+  ]
+}

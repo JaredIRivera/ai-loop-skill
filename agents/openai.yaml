@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Loop Skill"
+  short_description: "Bounded AI loops with practical evaluation and stop rules"
+  default_prompt: "Use $ai-loop-skill to design or review this workflow, choose suitable validation, and define explicit limits and escalation."
