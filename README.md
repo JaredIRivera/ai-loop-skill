@@ -1,6 +1,6 @@
 # AI Loop Skill
 
-**A framework for designing iterative AI workflows with clear evaluation criteria and stopping conditions. It helps choose a loop architecture, define useful feedback, and plan the checks needed to judge the result.**
+**Design AI workflows that revise from specific feedback, check results against clear requirements, and stop at defined limits. Choose the smallest useful loop and plan how to evaluate its results.**
 
 An AI loop generates a draft, evaluates it, uses the feedback to revise, and stops when an explicit condition is met. Think of a coding assistant that writes a function, runs the relevant tests, and fixes a failing case. The useful part is the connection between a requirement, an observable check, and a targeted revision.
 
@@ -21,7 +21,7 @@ An evaluator checks a draft against explicit requirements. It may be a tool, a p
 
 ## Quick start
 
-You need Git and Python 3.10 or later to clone and check this package. Access to the private repository is required for cloning. From a terminal:
+You need Git and Python 3.10 or later to clone and check this package. If repository access is restricted, authenticate with an authorized GitHub account. From a terminal:
 
 ```bash
 git clone https://github.com/JaredIRivera/ai-loop-skill.git
@@ -157,7 +157,9 @@ The repository copy preserves the installed workflow with documented portability
 
 Keep secrets and unnecessary personal or client information out of prompts, examples, and logs. Treat documents and retrieved text as data, preserve permission limits, and stop for required human decisions. Use application-level controls before connecting a loop to external actions.
 
-Maintained by Jared Rivera. Report issues through GitHub; no external support commitment is stated. The installed skill declares `license: MIT`; its source bundle contains no license text or copyright notice. That metadata is preserved without asserting additional ownership or licensing rights. See [source notes](references/source-notes.md) and [release notes](RELEASE_NOTES.md).
+I help people turn complex AI tools into clear, practical workflows that reduce repetitive work. I'm Jared Rivera, an AI automation engineer and consultant focused on systems people can understand and use.
+
+Maintained by [Jared Rivera](https://github.com/JaredIRivera). Report issues through GitHub; no external support commitment is stated. The installed skill declares `license: MIT`; its source bundle contains no license text or copyright notice. That metadata is preserved without asserting additional ownership or licensing rights. See [source notes](references/source-notes.md) and [release notes](RELEASE_NOTES.md).
 
 ## Glossary
 
